@@ -1,2 +1,2 @@
-// Optional enhancements (add animations later if you want)
+// Optional enhancements can be added here
 console.log("Website loaded successfully.");
