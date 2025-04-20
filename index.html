@@ -3,88 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <title>Adham Ahmed - Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    section {
-      padding: 20px;
-      margin: 10px;
-    }
-    h2 {
-      color: #2c3e50;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    li {
-      padding: 10px 0;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #2c3e50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    button:hover {
-      background-color: #34495e;
-    }
-  </style>
 </head>
 <body>
 
-  <header>
-    <h1>Hello! I'm Adham Ahmed</h1>
-    <p>Age: 20</p>
+  <nav class="navbar">
+    <div class="logo">Adham Ahmed</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Hi, I'm Adham Ahmed</h1>
+    <p>Age: 21</p>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Motivated and detail-oriented Computer Science student with a strong foundation in data analytics, programming, and statistical modeling. Proficient in tools such as Python, SQL, and Excel, with hands-on experience in data visualization using Tableau and Power BI.</p>
+    <p>I am a highly motivated and detail-oriented Computer Science student with a strong foundation in data analytics, programming, and statistical modeling. I possess hands-on experience in Python and SQL, and am proficient in tools such as Excel, Tableau, and Power BI. My passion lies in transforming data into meaningful insights through powerful visualizations and efficient code.</p>
   </section>
 
   <section id="education">
     <h2>Education</h2>
-    <ul>
-      <li>Studying Computer Science - MTI University</li>
-    </ul>
+    <p>Currently pursuing a degree in Computer Science at MTI University.</p>
   </section>
 
   <section id="skills">
-    <h2>What I Can Do</h2>
+    <h2>Skills</h2>
     <ul>
-      <li>📘 SQL (Structured Query Language): Writing queries to select, insert, update, and delete data. Using JOIN, GROUP BY, HAVING, subqueries. Managing tables, views, and indexes.</li>
-      <li>🛠️ Database Design: Creating ER diagrams, normalization (1NF, 2NF, 3NF), and designing schemas with primary & foreign keys.</li>
-      <li>🧠 RDBMS Experience: MySQL, PostgreSQL, SQLite, Microsoft SQL Server.</li>
+      <li>✔️ Proficient in Python and C++</li>
+      <li>✔️ Strong expertise in data analysis using SQL Server</li>
+      <li>✔️ Familiar with Power BI (currently improving skills)</li>
+      <li>✔️ Experienced in applying AI effectively for various applications</li>
     </ul>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:adhamnabbil@gmail.com">adhamnabbil@gmail.com</a></p>
-    <button onclick="showThanks()">Send Hello</button>
+    <p>Phone: <a href="tel:01001065214">01001065214</a></p>
   </section>
 
-  <script>
-    function showThanks() {
-      alert("Thanks for reaching out! 😊");
-    }
-  </script>
+  <footer>
+    <p>© 2025 Adham Ahmed. All rights reserved.</p>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

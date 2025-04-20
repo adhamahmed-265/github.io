@@ -1,3 +1,2 @@
-function showThanks() {
-  alert("Thanks for reaching out!");
-}
+// Optional enhancements (add animations later if you want)
+console.log("Website loaded successfully.");
