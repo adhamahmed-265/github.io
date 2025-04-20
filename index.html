@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 </head>
-<body class="dark-theme"> <header>
+<body class="dark-theme">
+    <header>
         <nav>
             <div class="logo">Adham Ahmed</div>
             <ul>
@@ -18,6 +19,9 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button id="themeToggleButton" aria-label="Toggle theme">
+            <i id="themeIcon" class="fas fa-moon"></i>
+        </button>
     </header>
 
     <section id="hero" class="hero">
@@ -55,12 +59,12 @@
                 <p>Competent in C++ for developing efficient and high-performance applications, with a strong understanding of object-oriented principles.</p>
             </div>
             <div class="skill-item">
-                <img src="sql-server-logo.png" alt="SQL Server" class="skill-logo">
+                <img src="https://logodix.com/logo/696508.png" alt="SQL Server" class="skill-logo">
                 <h3>SQL Server</h3>
                 <p>Demonstrated expertise in data manipulation, querying, and database management using SQL Server, including the ability to design and optimize database structures.</p>
             </div>
             <div class="skill-item">
-                <img src="powerbi-logo.png" alt="Power BI" class="skill-logo">
+                <img src="https://1000logos.net/wp-content/uploads/2022/08/Microsoft-Power-BI-Logo.png" alt="Power BI" class="skill-logo">
                 <h3>Power BI</h3>
                 <p>Developing proficiency in Power BI for creating interactive and insightful data visualizations and dashboards to support data-driven decision-making.</p>
             </div>
@@ -106,6 +110,41 @@
             profileImg.onerror = function() {
                 profileDiv.style.display = 'none'; // Hide the profile-image div if the image fails to load
             };
+
+            // Theme toggle button functionality
+            const themeToggleButton = document.getElementById('themeToggleButton');
+            const themeIcon = document.getElementById('themeIcon');
+            const body = document.body;
+
+            // Check if a theme preference is stored in local storage
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme === 'dark') {
+                body.classList.add('dark-theme');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else if (storedTheme === 'light') {
+                body.classList.remove('dark-theme');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                // If no stored theme, respect the initial body class
+                if (body.classList.contains('dark-theme')) {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                } else {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                }
+            }
+
+            themeToggleButton.addEventListener('click', function() {
+                body.classList.toggle('dark-theme');
+                const isDarkMode = body.classList.contains('dark-theme');
+                themeIcon.classList.toggle('fa-sun', !isDarkMode);
+                themeIcon.classList.toggle('fa-moon', isDarkMode);
+                // Store the current theme preference in local storage
+                localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+            });
         });
 
         window.addEventListener('scroll', reveal);
