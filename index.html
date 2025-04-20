@@ -24,7 +24,7 @@
     <section id="hero" class="hero">
         <div class="hero-content">
             <div class="profile-image">
-                <img src="placeholder-profile.jpg" alt="Adham Ahmed">
+                <img src="placeholder-profile.jpg" alt="Adham Ahmed" id="profileImg">
             </div>
             <h1>Adham Ahmed</h1>
             <p class="tagline">Aspiring Data Scientist | Computer Science Student</p>
@@ -100,6 +100,13 @@
         document.addEventListener('DOMContentLoaded', function() {
             const hero = document.querySelector('.hero');
             hero.classList.add('animate-hero');
+
+            const profileDiv = document.querySelector('.profile-image');
+            const profileImg = document.getElementById('profileImg');
+
+            profileImg.onerror = function() {
+                profileDiv.style.display = 'none'; // Hide the profile-image div if the image fails to load
+            };
         });
 
         window.addEventListener('scroll', reveal);
