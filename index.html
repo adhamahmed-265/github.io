@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adham Ahmed - Aspiring Data Scientist</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> </head>
 <body>
     <header>
         <nav>
@@ -21,39 +21,59 @@
 
     <section id="hero" class="hero">
         <div class="hero-content">
+            <div class="profile-image">
+                <img src="placeholder-profile.jpg" alt="Adham Ahmed">
+            </div>
             <h1>Adham Ahmed</h1>
             <p class="tagline">Aspiring Data Scientist | Computer Science Student</p>
-        </div>
+            </div>
     </section>
 
     <section id="about" class="about">
-        <h2>About Me</h2>
+        <h2><i class="fas fa-user"></i> About Me</h2>
         <p>Highly motivated and detail-oriented Computer Science student with a robust understanding of data analytics, programming principles, and statistical modeling techniques. Proficient in leveraging powerful tools such as Python, SQL, and Excel to extract meaningful insights from data. Possesses hands-on experience in creating compelling data visualizations using Tableau and Power BI to effectively communicate findings.</p>
     </section>
 
     <section id="education" class="education">
-        <h2>Education</h2>
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
         <p>Studying Computer Science at MTI University.</p>
     </section>
 
     <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Programming Languages:</strong> Proficient in Python and C++</li>
-            <li><strong>Data Analysis:</strong> Strong expertise in data analysis and manipulation, particularly with SQL Server</li>
-            <li><strong>Data Visualization:</strong> Familiar with Power BI (actively developing proficiency)</li>
-            <li><strong>Artificial Intelligence:</strong> Experienced in working with AI concepts and leveraging them effectively for diverse applications</li>
-        </ul>
+        <h2><i class="fas fa-code"></i> Skills</h2>
+        <div class="skills-list">
+            <div class="skill">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+            </div>
+            <div class="skill">
+                <i class="fab fa-cplusplus"></i>
+                <span>C++</span>
+            </div>
+            <div class="skill">
+                <img src="sql-server-logo.png" alt="SQL Server">
+                <span>SQL Server</span>
+            </div>
+            <div class="skill">
+                <img src="powerbi-logo.png" alt="Power BI">
+                <span>Power BI</span>
+            </div>
+            <div class="skill">
+                <i class="fas fa-brain"></i>
+                <span>Artificial Intelligence</span>
+            </div>
+            </div>
+        <p class="skills-description">Proficient in Python and C++, with strong expertise in data analysis using SQL Server. Familiar with Power BI and experienced in working with AI concepts.</p>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contact</h2>
+        <h2><i class="fas fa-envelope"></i> Contact</h2>
         <p>Feel free to reach out!</p>
-        <ul>
-            <li><strong>Email:</strong> <a href="mailto:adhamnabbil@gmail.com">adhamnabbil@gmail.com</a></li>
-            <li><strong>Phone:</strong> 01001065214</li>
+        <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:adhamnabbil@gmail.com">adhamnabbil@gmail.com</a></li>
+            <li><i class="fas fa-phone"></i> <strong>Phone:</strong> 01001065214</li>
         </ul>
-    </section>
+        </section>
 
     <footer>
         <p>&copy; 2025 Adham Ahmed. All rights reserved.</p>
@@ -75,6 +95,25 @@
             const hero = document.querySelector('.hero');
             hero.classList.add('animate-hero');
         });
+
+        // Basic scroll reveal animation (you might want to use a library for more advanced effects)
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            const reveals = document.querySelectorAll('.about, .education, .skills, .contact');
+
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveals[i].getBoundingClientRect().top;
+                const revealPoint = 150;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
     </script>
 </body>
 </html>

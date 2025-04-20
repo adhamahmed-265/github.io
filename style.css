@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif; /* A modern and clean font */
     margin: 0;
     padding: 0;
     background-color: #f8f9fa; /* Light gray background */
@@ -10,13 +10,13 @@ body {
 }
 
 header {
-    background-color: #212529; /* Dark background for header */
-    color: #fff;
+    background-color: #fff; /* White header */
+    color: #212529; /* Dark text for header */
     padding: 1.2em 0;
     position: fixed;
     width: 100%;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -29,9 +29,10 @@ nav {
 }
 
 .logo {
-    font-size: 1.7em;
-    font-weight: 500;
+    font-size: 1.8em;
+    font-weight: 700;
     letter-spacing: 0.5px;
+    color: #007bff; /* Blue accent color */
 }
 
 nav ul {
@@ -42,22 +43,22 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 2em;
+    margin-left: 2.5em;
 }
 
 nav ul li a {
-    color: #adb5bd; /* Light gray text for links */
+    color: #495057; /* Medium gray for links */
     text-decoration: none;
     transition: color 0.3s ease-in-out;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 nav ul li a:hover {
-    color: #fff;
+    color: #007bff; /* Blue accent on hover */
 }
 
 section {
-    padding: 6em 3em;
+    padding: 8em 3em;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -66,12 +67,15 @@ section {
     background-color: #e9ecef; /* Very light gray for hero */
     color: #495057; /* Medium gray text */
     text-align: center;
-    padding: 10em 3em;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 8em 3em;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .hero.animate-hero {
@@ -79,88 +83,184 @@ section {
     transform: translateY(0);
 }
 
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .hero-content h1 {
-    font-size: 3.5em;
-    margin-bottom: 0.6em;
+    font-size: 3em;
+    margin-bottom: 0.7em;
     color: #212529;
 }
 
 .hero-content .tagline {
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: #6c757d;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .about h2, .education h2, .skills h2, .contact h2 {
     color: #212529;
     border-bottom: 4px solid #007bff; /* Blue accent */
-    padding-bottom: 0.7em;
-    margin-bottom: 1.2em;
-    font-size: 2.2em;
-    font-weight: 500;
+    padding-bottom: 0.8em;
+    margin-bottom: 1.5em;
+    font-size: 2.5em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.about h2 i, .education h2 i, .skills h2 i, .contact h2 i {
+    margin-right: 0.5em;
+    color: #007bff;
 }
 
 .about p {
+    font-size: 1.15em;
+    line-height: 1.9;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+}
+
+.skill i {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 0.5em;
+}
+
+.skill img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0.5em;
+}
+
+.skill span {
+    font-weight: 500;
+    color: #495057;
+}
+
+.skills-description {
     font-size: 1.1em;
-    line-height: 1.8;
+    color: #6c757d;
+    margin-top: 1em;
+    text-align: center;
 }
 
-.skills ul {
-    list-style: none;
-    padding: 0;
+/*.projects h2 {
+    /* Style for the projects section header
 }
 
-.skills ul li {
-    margin-bottom: 1em;
-    font-size: 1.1em;
+.project-list {
+    /* Style for the list of projects
 }
 
-.skills ul li strong {
-    font-weight: 600;
-    color: #007bff; /* Blue accent */
-}
+.project-card {
+    /* Style for individual project cards
+}*/
 
 .contact p {
-    font-size: 1.1em;
-    margin-bottom: 1em;
+    font-size: 1.15em;
+    margin-bottom: 1.2em;
 }
 
-.contact ul {
+.contact-info {
     list-style: none;
     padding: 0;
 }
 
-.contact ul li {
-    margin-bottom: 0.8em;
+.contact-info li {
+    margin-bottom: 1em;
     font-size: 1.1em;
+    display: flex;
+    align-items: center;
 }
 
-.contact ul li strong {
+.contact-info li i {
+    margin-right: 0.8em;
+    font-size: 1.2em;
+    color: #007bff;
+    width: 20px; /* Adjust width for alignment */
+    text-align: center;
+}
+
+.contact-info li strong {
     font-weight: 600;
 }
 
-.contact ul li a {
-    color: #007bff; /* Blue accent */
+.contact-info li a {
+    color: #007bff;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
-.contact ul li a:hover {
-    color: #0056b3; /* Darker blue */
+.contact-info li a:hover {
+    color: #0056b3;
 }
 
 footer {
     background-color: #212529; /* Dark background for footer */
     color: #fff;
     text-align: center;
-    padding: 1.5em 0;
-    position: sticky;
-    bottom: 0;
-    width: 100%;
+    padding: 2em 0;
     font-size: 0.9em;
 }
 
-/* Add more spacing between sections for better visual separation */
-#about, #education, #skills, #contact {
-    margin-top: 6em;
+/* Scroll Reveal Animation */
+.about, .education, .skills, .contact {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about.active, .education.active, .skills.active, .contact.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Placeholder for profile image */
+.profile-image img {
+    /* You'll need to replace 'placeholder-profile.jpg' with your actual image path */
+    content: url('placeholder-profile.jpg');
+}
+
+/* Placeholder styles for logos - replace with actual image paths */
+.skills-list .skill:nth-child(3) img {
+    content: url('sql-server-logo.png'); /* Replace with your SQL Server logo path */
+}
+
+.skills-list .skill:nth-child(4) img {
+    content: url('powerbi-logo.png'); /* Replace with your Power BI logo path */
 }
