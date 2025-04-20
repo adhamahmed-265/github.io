@@ -19,7 +19,9 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button id="themeToggleButton">Toggle Light/Dark Mode</button>
+        <button id="themeToggleButton" aria-label="Toggle theme">
+            <i id="themeIcon" class="fas fa-sun"></i>
+        </button>
     </header>
 
     <section id="hero" class="hero">
@@ -90,18 +92,24 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const themeToggleButton = document.getElementById('themeToggleButton');
+            const themeIcon = document.getElementById('themeIcon');
             const body = document.body;
 
             // Check if a theme preference is stored in local storage
             const storedTheme = localStorage.getItem('theme');
             if (storedTheme === 'dark') {
                 body.classList.add('dark-theme');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
             }
 
             themeToggleButton.addEventListener('click', function() {
                 body.classList.toggle('dark-theme');
+                const isDarkMode = body.classList.contains('dark-theme');
+                themeIcon.classList.toggle('fa-sun', !isDarkMode);
+                themeIcon.classList.toggle('fa-moon', isDarkMode);
                 // Store the current theme preference in local storage
-                localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
+                localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
             });
 
             document.querySelectorAll('nav a').forEach(anchor => {
