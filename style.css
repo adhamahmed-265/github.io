@@ -144,50 +144,50 @@ section {
     text-align: center;
 }
 
-.skills-list {
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Wider minmax for better layout */
-    gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased minmax for wider items */
+    gap: 2.5em; /* Increased gap for more visual separation */
     margin-bottom: 2em;
 }
 
-.skill {
+.skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 1.5em;
+    padding: 2em; /* Increased padding */
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
     text-align: center;
     transition: transform 0.2s ease-in-out;
 }
 
-.skill:hover {
-    transform: translateY(-5px);
+.skill-item:hover {
+    transform: translateY(-8px); /* Slightly more pronounced hover effect */
 }
 
-.skill i {
-    font-size: 2.5em; /* Slightly larger icons */
+.skill-item i {
+    font-size: 3em; /* Further increased icon size */
     color: #007bff;
-    margin-bottom: 0.7em;
+    margin-bottom: 1em;
 }
 
-.skill img.skill-logo {
-    width: 40px; /* Increased logo size for clarity */
-    height: 40px;
-    margin-bottom: 0.7em;
+.skill-item img.skill-logo {
+    width: 50px; /* Further increased logo size */
+    height: 50px;
+    margin-bottom: 1em;
 }
 
-.skill span {
-    font-weight: 600; /* Stronger emphasis on skill names */
+.skill-item h3 {
+    font-size: 1.5em; /* Clear heading for each skill */
+    font-weight: 600;
     color: #212529;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.5em;
 }
 
-.skill-description {
-    font-size: 0.95em;
+.skill-item p {
+    font-size: 1em;
     color: #6c757d;
     line-height: 1.6;
 }
