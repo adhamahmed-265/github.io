@@ -3,60 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to My Website</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background-color: #222;
-      color: white;
-      padding: 20px 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    main {
-      padding: 50px 20px;
-    }
-    footer {
-      background-color: #222;
-      color: white;
-      padding: 15px 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
-  </style>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
   <header>
-    <h1>Adham Ahmed's Website</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
-    </nav>
+    <h1>Hello! I'm Adham Ahmed</h1>
+    <p>Age: 20</p>
   </header>
 
-  <main>
-    <h2>Welcome!</h2>
-    <p>This is a simple website hosted using GitHub Pages.</p>
-    <p>Stay tuned for updates and projects.</p>
-  </main>
+  <section id="about">
+    <h2>About Me</h2>
+    <p> Motivated and detail-oriented Computer Science student with a strong foundation in data
+ analytics, programming, and statistical modeling. Proficient in tools such as Python, SQL, and
+ Excel, with hands-on experience in data visualization using Tableau and Power BI..</p>
+  </section>
 
-  <footer>
-    <p>© 2025 Adham Ahmed</p>
-  </footer>
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>Studying Computer Science - MTI University</li>
+    </ul>
+  </section>
 
+  <section id="skills">
+    <h2>What I Can Do</h2>
+    <ul>
+      <li>📘 1. SQL (Structured Query Language)
+Writing queries to select, insert, update, and delete data.
+
+Using JOIN, GROUP BY, HAVING, and subqueries.
+
+Creating and managing tables, views, indexes.</li>
+      <li>🛠️ 2. Database Design
+Creating ER (Entity-Relationship) diagrams.
+
+Normalization (1NF, 2NF, 3NF).
+
+Designing schemas with primary & foreign keys.</li>
+      <li🧠 3. RDBMS (Relational Database Management Systems)
+Experience with:
+
+MySQL
+
+PostgreSQL
+
+SQLite
+
+Microsoft SQL Server</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: adhamnabbil@gmail.com</p>
+    <button onclick="showThanks()">Send Hello</button>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
