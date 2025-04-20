@@ -1,11 +1,11 @@
 /* Dark Theme Styles */
 body.dark-theme {
-    background-color: #1e1e1e; /* Dark background */
-    color: #d4d4d4; /* Light text */
+    background-color: #1e1e1e;
+    color: #d4d4d4;
 }
 
 body.dark-theme header {
-    background-color: #252525; /* Darker header */
+    background-color: #252525;
     color: #d4d4d4;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
@@ -19,7 +19,7 @@ body.dark-theme nav ul li a:hover {
 }
 
 body.dark-theme .hero {
-    background-color: #252525; /* Darker hero */
+    background-color: #252525;
     color: #d4d4d4;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
@@ -37,7 +37,7 @@ body.dark-theme .education h2,
 body.dark-theme .skills h2,
 body.dark-theme .contact h2 {
     color: #fff;
-    border-bottom-color: #00bfff; /* Brighter blue accent */
+    border-bottom-color: #00bfff;
 }
 
 body.dark-theme .about h2 i,
@@ -48,7 +48,7 @@ body.dark-theme .contact h2 i {
 }
 
 body.dark-theme .skill-item {
-    background-color: #333; /* Dark skill item background */
+    background-color: #333;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     color: #d4d4d4;
 }
@@ -78,7 +78,7 @@ body.dark-theme .contact-info li a:hover {
 }
 
 body.dark-theme footer {
-    background-color: #252525; /* Darker footer */
+    background-color: #252525;
     color: #a6a6a6;
 }
 
@@ -87,16 +87,16 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Default light background */
-    color: #343a40; /* Default dark text */
+    background-color: #f8f9fa;
+    color: #343a40;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 header {
-    background-color: #fff; /* Default white header */
-    color: #212529; /* Default dark header text */
+    background-color: #fff;
+    color: #212529;
     padding: 1.2em 0;
     position: fixed;
     width: 100%;
@@ -117,7 +117,7 @@ nav {
     font-size: 1.8em;
     font-weight: 700;
     letter-spacing: 0.5px;
-    color: #007bff; /* Default blue accent */
+    color: #007bff;
 }
 
 nav ul {
@@ -132,14 +132,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #495057; /* Default medium gray links */
+    color: #495057;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     font-weight: 500;
 }
 
 nav ul li a:hover {
-    color: #007bff; /* Default blue hover */
+    color: #007bff;
 }
 
 section {
@@ -149,8 +149,8 @@ section {
 }
 
 .hero {
-    background-color: #e9ecef; /* Default light hero */
-    color: #495057; /* Default medium gray hero text */
+    background-color: #e9ecef;
+    color: #495057;
     text-align: center;
     padding: 8em 3em;
     border-radius: 10px;
@@ -187,18 +187,18 @@ section {
 .hero-content h1 {
     font-size: 3em;
     margin-bottom: 0.7em;
-    color: #212529; /* Default dark hero heading */
+    color: #212529;
 }
 
 .hero-content .tagline {
     font-size: 1.2em;
-    color: #6c757d; /* Default medium gray tagline */
+    color: #6c757d;
     font-weight: 400;
 }
 
 .about h2, .education h2, .skills h2, .contact h2 {
-    color: #212529; /* Default dark section heading */
-    border-bottom: 4px solid #007bff; /* Default blue accent */
+    color: #212529;
+    border-bottom: 4px solid #007bff;
     padding-bottom: 0.8em;
     margin-bottom: 1.5em;
     font-size: 2.5em;
@@ -210,7 +210,7 @@ section {
 .about h2 i, .education h2 i, .skills h2 i, .contact h2 i {
     margin-right: 0.5em;
     font-size: 1.2em;
-    color: #007bff; /* Default blue icon */
+    color: #007bff;
 }
 
 .about p {
@@ -224,7 +224,7 @@ section {
 
 .skills-intro {
     font-size: 1.1em;
-    color: #6c757d; /* Default medium gray intro text */
+    color: #6c757d;
     margin-bottom: 2em;
     text-align: center;
 }
@@ -241,7 +241,7 @@ section {
     flex-direction: column;
     align-items: center;
     padding: 2em;
-    background-color: #fff; /* Default white skill item */
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
     text-align: center;
@@ -254,7 +254,7 @@ section {
 
 .skill-item i {
     font-size: 3em;
-    color: #007bff; /* Default blue skill icon */
+    color: #007bff;
     margin-bottom: 1em;
 }
 
@@ -267,13 +267,13 @@ section {
 .skill-item h3 {
     font-size: 1.5em;
     font-weight: 600;
-    color: #212529; /* Default dark skill title */
+    color: #212529;
     margin-bottom: 0.5em;
 }
 
 .skill-item p {
     font-size: 1em;
-    color: #6c757d; /* Default medium gray skill description */
+    color: #6c757d;
     line-height: 1.6;
 }
 
@@ -297,7 +297,7 @@ section {
 .contact-info li i {
     margin-right: 0.8em;
     font-size: 1.2em;
-    color: #007bff; /* Default blue contact icon */
+    color: #007bff;
     width: 20px;
     text-align: center;
 }
@@ -307,5 +307,31 @@ section {
 }
 
 .contact-info li a {
-    color: #007bff; /* Default blue contact link */
-    text-
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-info li a:hover {
+    color: #0056b3;
+}
+
+footer {
+    background-color: #212529;
+    color: #fff;
+    text-align: center;
+    padding: 2em 0;
+    font-size: 0.9em;
+}
+
+/* Scroll Reveal Animation */
+.about, .education, .skills, .contact {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about.active, .education.active, .skills.active, .contact.active {
+    opacity: 1;
+    transform: translateY(0);
+}

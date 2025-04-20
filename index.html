@@ -86,6 +86,7 @@
     </footer>
 
     <script>
+        // Smooth scrolling for navigation links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -96,18 +97,23 @@
             });
         });
 
+        // Add animation to the hero section on page load
         document.addEventListener('DOMContentLoaded', function() {
             const hero = document.querySelector('.hero');
             hero.classList.add('animate-hero');
 
+            // Handle potential image loading error for the profile image
             const profileDiv = document.querySelector('.profile-image');
             const profileImg = document.getElementById('profileImg');
 
-            profileImg.onerror = function() {
-                profileDiv.style.display = 'none'; // Hide the profile-image div if the image fails to load
-            };
+            if (profileImg) { // Check if the element exists
+                profileImg.onerror = function() {
+                    profileDiv.style.display = 'none'; // Hide the profile-image div if the image fails to load
+                };
+            }
         });
 
+        // Scroll reveal animation for sections
         window.addEventListener('scroll', reveal);
 
         function reveal() {
