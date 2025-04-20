@@ -82,38 +82,42 @@ body.dark-theme footer {
     color: #a6a6a6;
 }
 
-/* General Styles */
+/* General Styles (will be overridden by dark-theme for some properties) */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Default light background */
-    color: #343a40; /* Default dark text */
+    background-color: #f8f9fa;
+    color: #343a40;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 header {
-    background-color: #fff; /* Default white header */
-    color: #212529; /* Default dark header text */
-    padding: 1.2em 3em; /* Add some padding to the sides */
+    background-color: #fff;
+    color: #212529;
+    padding: 1.2em 0;
     position: fixed;
     width: 100%;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between; /* Space out logo and nav vs. button */
-    align-items: center;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
-    margin-right: auto; /* Push nav to the left */
+    padding: 0 3em;
     max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #007bff;
 }
 
 nav ul {
@@ -128,30 +132,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #495057; /* Default medium gray links */
+    color: #495057;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     font-weight: 500;
 }
 
 nav ul li a:hover {
-    color: #007bff; /* Default blue hover */
-}
-
-#themeToggleButton {
-    background: none;
-    border: none;
-    color: #495057; /* Default button icon color */
-    cursor: pointer;
-    font-size: 1.5em;
-    padding: 0.5em;
-    margin-left: 2em; /* Space from the nav */
-    outline: none; /* Remove default focus outline */
-    transition: color 0.3s ease-in-out;
-}
-
-.dark-theme #themeToggleButton {
-    color: #d4d4d4; /* Dark mode button icon color */
+    color: #007bff;
 }
 
 section {
@@ -161,8 +149,8 @@ section {
 }
 
 .hero {
-    background-color: #e9ecef; /* Default light hero */
-    color: #495057; /* Default medium gray hero text */
+    background-color: #e9ecef;
+    color: #495057;
     text-align: center;
     padding: 8em 3em;
     border-radius: 10px;
@@ -199,18 +187,18 @@ section {
 .hero-content h1 {
     font-size: 3em;
     margin-bottom: 0.7em;
-    color: #212529; /* Default dark hero heading */
+    color: #212529;
 }
 
 .hero-content .tagline {
     font-size: 1.2em;
-    color: #6c757d; /* Default medium gray tagline */
+    color: #6c757d;
     font-weight: 400;
 }
 
 .about h2, .education h2, .skills h2, .contact h2 {
-    color: #212529; /* Default dark section heading */
-    border-bottom: 4px solid #007bff; /* Default blue accent */
+    color: #212529;
+    border-bottom: 4px solid #007bff;
     padding-bottom: 0.8em;
     margin-bottom: 1.5em;
     font-size: 2.5em;
@@ -222,7 +210,7 @@ section {
 .about h2 i, .education h2 i, .skills h2 i, .contact h2 i {
     margin-right: 0.5em;
     font-size: 1.2em;
-    color: #007bff; /* Default blue icon */
+    color: #007bff;
 }
 
 .about p {
@@ -236,7 +224,7 @@ section {
 
 .skills-intro {
     font-size: 1.1em;
-    color: #6c757d; /* Default medium gray intro text */
+    color: #6c757d;
     margin-bottom: 2em;
     text-align: center;
 }
@@ -253,7 +241,7 @@ section {
     flex-direction: column;
     align-items: center;
     padding: 2em;
-    background-color: #fff; /* Default white skill item */
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
     text-align: center;
@@ -266,7 +254,7 @@ section {
 
 .skill-item i {
     font-size: 3em;
-    color: #007bff; /* Default blue skill icon */
+    color: #007bff;
     margin-bottom: 1em;
 }
 
@@ -279,3 +267,71 @@ section {
 .skill-item h3 {
     font-size: 1.5em;
     font-weight: 600;
+    color: #212529;
+    margin-bottom: 0.5em;
+}
+
+.skill-item p {
+    font-size: 1em;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.contact p {
+    font-size: 1.15em;
+    margin-bottom: 1.2em;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 1em;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info li i {
+    margin-right: 0.8em;
+    font-size: 1.2em;
+    color: #007bff;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-info li strong {
+    font-weight: 600;
+}
+
+.contact-info li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-info li a:hover {
+    color: #0056b3;
+}
+
+footer {
+    background-color: #212529;
+    color: #fff;
+    text-align: center;
+    padding: 2em 0;
+    font-size: 0.9em;
+}
+
+/* Scroll Reveal Animation */
+.about, .education, .skills, .contact {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about.active, .education.active, .skills.active, .contact.active {
+    opacity: 1;
+    transform: translateY(0);
+}

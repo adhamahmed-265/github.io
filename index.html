@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 </head>
-<body>
-    <header>
+<body class="dark-theme"> <header>
         <nav>
             <div class="logo">Adham Ahmed</div>
             <ul>
@@ -19,9 +18,6 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button id="themeToggleButton" aria-label="Toggle theme">
-            <i id="themeIcon" class="fas fa-sun"></i>
-        </button>
     </header>
 
     <section id="hero" class="hero">
@@ -90,49 +86,26 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const themeToggleButton = document.getElementById('themeToggleButton');
-            const themeIcon = document.getElementById('themeIcon');
-            const body = document.body;
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-            // Check if a theme preference is stored in local storage
-            const storedTheme = localStorage.getItem('theme');
-            if (storedTheme === 'dark') {
-                body.classList.add('dark-theme');
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-
-            themeToggleButton.addEventListener('click', function() {
-                body.classList.toggle('dark-theme');
-                const isDarkMode = body.classList.contains('dark-theme');
-                themeIcon.classList.toggle('fa-sun', !isDarkMode);
-                themeIcon.classList.toggle('fa-moon', isDarkMode);
-                // Store the current theme preference in local storage
-                localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-            });
-
-            document.querySelectorAll('nav a').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
             });
+        });
 
+        document.addEventListener('DOMContentLoaded', function() {
             const hero = document.querySelector('.hero');
             hero.classList.add('animate-hero');
 
             const profileDiv = document.querySelector('.profile-image');
             const profileImg = document.getElementById('profileImg');
 
-            if (profileImg) {
-                profileImg.onerror = function() {
-                    profileDiv.style.display = 'none';
-                };
-            }
+            profileImg.onerror = function() {
+                profileDiv.style.display = 'none'; // Hide the profile-image div if the image fails to load
+            };
         });
 
         window.addEventListener('scroll', reveal);
