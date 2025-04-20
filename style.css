@@ -1,94 +1,166 @@
-/* Reset default styles */
-* {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body styling */
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-    scroll-behavior: smooth;
-  }
-  
-  /* Navigation bar */
-  .navbar {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40; /* Dark gray text */
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    background-color: #212529; /* Dark background for header */
+    color: #fff;
+    padding: 1.2em 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #1f1f1f;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo {
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
+    padding: 0 3em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.7em;
     font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: #1abc9c;
-  }
-  
-  /* Hero section */
-  .hero {
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2em;
+}
+
+nav ul li a {
+    color: #adb5bd; /* Light gray text for links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-weight: 400;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+section {
+    padding: 6em 3em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    background-color: #e9ecef; /* Very light gray for hero */
+    color: #495057; /* Medium gray text */
     text-align: center;
-    padding: 100px 20px 60px;
-    background: linear-gradient(to right, #1abc9c, #16a085);
-    color: white;
-  }
-  
-  /* Sections */
-  section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
-  }
-  
-  section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #1abc9c;
-  }
-  
-  section ul li {
-    margin-bottom: 12px;
-    padding-left: 20px;
-    position: relative;
-  }
-  
-  section ul li::before {
-    content: "✔️";
-    position: absolute;
-    left: 0;
-    color: #16a085;
-  }
-  
-  /* Footer */
-  footer {
+    padding: 10em 3em;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.hero.animate-hero {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.6em;
+    color: #212529;
+}
+
+.hero-content .tagline {
+    font-size: 1.3em;
+    color: #6c757d;
+    font-weight: 300;
+}
+
+.about h2, .education h2, .skills h2, .contact h2 {
+    color: #212529;
+    border-bottom: 4px solid #007bff; /* Blue accent */
+    padding-bottom: 0.7em;
+    margin-bottom: 1.2em;
+    font-size: 2.2em;
+    font-weight: 500;
+}
+
+.about p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+.skills ul li strong {
+    font-weight: 600;
+    color: #007bff; /* Blue accent */
+}
+
+.contact p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact ul li {
+    margin-bottom: 0.8em;
+    font-size: 1.1em;
+}
+
+.contact ul li strong {
+    font-weight: 600;
+}
+
+.contact ul li a {
+    color: #007bff; /* Blue accent */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact ul li a:hover {
+    color: #0056b3; /* Darker blue */
+}
+
+footer {
+    background-color: #212529; /* Dark background for footer */
+    color: #fff;
     text-align: center;
-    padding: 20px;
-    background: #1f1f1f;
-    color: #ccc;
-    margin-top: 40px;
-  }
-  
+    padding: 1.5em 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+/* Add more spacing between sections for better visual separation */
+#about, #education, #skills, #contact {
+    margin-top: 6em;
+}

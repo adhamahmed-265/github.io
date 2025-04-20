@@ -1,60 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Adham Ahmed - Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adham Ahmed - Aspiring Data Scientist</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">Adham Ahmed</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <nav class="navbar">
-    <div class="logo">Adham Ahmed</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Adham Ahmed</h1>
+            <p class="tagline">Aspiring Data Scientist | Computer Science Student</p>
+        </div>
+    </section>
 
-  <header class="hero">
-    <h1>Hi, I'm Adham Ahmed</h1>
-    <p>Age: 21</p>
-  </header>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Highly motivated and detail-oriented Computer Science student with a robust understanding of data analytics, programming principles, and statistical modeling techniques. Proficient in leveraging powerful tools such as Python, SQL, and Excel to extract meaningful insights from data. Possesses hands-on experience in creating compelling data visualizations using Tableau and Power BI to effectively communicate findings.</p>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a highly motivated and detail-oriented Computer Science student with a strong foundation in data analytics, programming, and statistical modeling. I possess hands-on experience in Python and SQL, and am proficient in tools such as Excel, Tableau, and Power BI. My passion lies in transforming data into meaningful insights through powerful visualizations and efficient code.
-    </p>
-  </section>
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <p>Studying Computer Science at MTI University.</p>
+    </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <p>Currently pursuing a degree in Computer Science at MTI University.</p>
-  </section>
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Programming Languages:</strong> Proficient in Python and C++</li>
+            <li><strong>Data Analysis:</strong> Strong expertise in data analysis and manipulation, particularly with SQL Server</li>
+            <li><strong>Data Visualization:</strong> Familiar with Power BI (actively developing proficiency)</li>
+            <li><strong>Artificial Intelligence:</strong> Experienced in working with AI concepts and leveraging them effectively for diverse applications</li>
+        </ul>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>✔️ Proficient in Python and C++</li>
-      <li>✔️ Strong expertise in data analysis using SQL Server</li>
-      <li>✔️ Familiar with Power BI (currently improving skills)</li>
-      <li>✔️ Experienced in applying AI effectively for various applications</li>
-    </ul>
-  </section>
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out!</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:adhamnabbil@gmail.com">adhamnabbil@gmail.com</a></li>
+            <li><strong>Phone:</strong> 01001065214</li>
+        </ul>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:adhamnabbil@gmail.com">adhamnabbil@gmail.com</a></p>
-    <p>Phone: <a href="tel:01001065214">01001065214</a></p>
-  </section>
+    <footer>
+        <p>&copy; 2025 Adham Ahmed. All rights reserved.</p>
+    </footer>
 
-  <footer>
-    <p>© 2025 Adham Ahmed. All rights reserved.</p>
-  </footer>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-  <script src="script.js"></script>
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add a subtle animation to the hero section on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const hero = document.querySelector('.hero');
+            hero.classList.add('animate-hero');
+        });
+    </script>
 </body>
 </html>
